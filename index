@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Galeri Hatiku</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff9f9;
+      color: #333;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 40px;
+      color: #d33682;
+    }
+    h2 {
+      font-size: 24px;
+      margin-top: 20px;
+      color: #6c3483;
+    }
+    p {
+      font-size: 18px;
+    }
+    .copyright {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1>Galeri-hatiku</h1>
+  <h2>KENANGAN KU BERSAMANYA</h2>
+  <p>Terima kasih sudah menjadi bagian dari kisah ini.</p>
+
+  <div class="copyright">
+    &copy; 2025 - Semua hak dilindungi. Dilarang menyalin atau memodifikasi tanpa izin.
+  </div>
+</body>
+</html>
