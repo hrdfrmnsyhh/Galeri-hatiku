@@ -2,42 +2,98 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Galeri Hatiku</title>
+  <title>Herdi Firmansyah</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
     body {
+      margin: 0;
       font-family: 'Poppins', sans-serif;
-      background-color: #fff9f9;
-      color: #333;
-      padding: 40px;
+      background-color: #fff0f5;
+      overflow: hidden;
+    }
+    .loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: #fce4ec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: #d81b60;
+      z-index: 9999;
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 9998;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      align-items: center;
+      justify-content: center;
+    }
+    .popup-content {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 400px;
       text-align: center;
     }
-    h1 {
-      font-size: 40px;
-      color: #d33682;
+    .popup h2 {
+      color: #d81b60;
     }
-    h2 {
-      font-size: 24px;
+    .popup button {
       margin-top: 20px;
-      color: #6c3483;
+      padding: 10px 20px;
+      background: #d81b60;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
     }
-    p {
-      font-size: 18px;
-    }
-    .copyright {
-      margin-top: 50px;
-      font-size: 14px;
-      color: #777;
+    .main-content {
+      display: none;
+      padding: 30px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>Galeri-hatiku</h1>
-  <h2>KENANGAN KU BERSAMANYA</h2>
-  <p>Terima kasih sudah menjadi bagian dari kisah ini.</p>
 
-  <div class="copyright">
-    &copy; 2025 - Semua hak dilindungi. Dilarang menyalin atau memodifikasi tanpa izin.
+  <div class="loader">Loading cinta...</div>
+
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>Herdi Firmansyah</h2>
+      <p>Selamat datang, Salfa.<br>
+      Aku cuma mau bilang, makasih udah hadir dalam hidup aku.<br>
+      Kamu itu rumah ternyaman yang pernah aku temui.</p>
+      <button onclick="closePopup()">Masuk</button>
+    </div>
   </div>
+
+  <div class="main-content" id="mainContent">
+    <h1>Galeri Hatiku</h1>
+    <p>Kenangan indah yang pernah kita lalui berdua...</p>
+    <!-- Nanti di sini bisa tambah galeri, dll -->
+  </div>
+
+  <script>
+    // Loading screen
+    window.onload = function () {
+      setTimeout(function () {
+        document.querySelector('.loader').style.display = 'none';
+        document.getElementById('popup').style.display = 'flex';
+      }, 2000); // waktu loading 2 detik
+    };
+
+    // Tutup popup
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+      document.getElementById('mainContent').style.display = 'block';
+      document.body.style.overflow = 'auto';
+    }
+  </script>
+
 </body>
 </html>
